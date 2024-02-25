@@ -6,9 +6,12 @@
                     <div class="single-slider  slider-height2 d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-center ">
-                                <div class="col-xl-7 col-lg-11">
+                                <div class="col-xl-6 col-lg-6">
                                     <div class="hero-caption hero-caption2 pt-10">
-                                        <h1>Hotels</h1>
+                                        <h1 class="head-title">
+                                            <div class="head">Hotel </div>
+                                            <div class="head-custom">{{ props.hotel[0].name }}</div>
+                                        </h1>
                                     </div>
                                 </div>
                             </div>
@@ -22,7 +25,7 @@
                                     <div class="date-pic mb-15">
                                         <label for="#"></label>
                                         <div class="boking-datepicker">
-
+                                            <h1>{{ props.hotel[0].hotel_type.name }}</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -50,8 +53,8 @@
                             <div class="col-xl-4 col-lg-5 col-md-8">
 
                                 <div class="section-tittle mb-50">
-                                    <h2>Hotels</h2>
-                                    <p>The concept and service of the best luxury hotels in Asturias in our sophisticated.
+                                    <h2>Hotel Rooms</h2>
+                                    <p>{{ props.hotel[0].description }}
                                     </p>
                                 </div>
                             </div>
@@ -59,20 +62,23 @@
                     </div>
                     <div class="container">
                         <div class="row">
-                            <div class="col-lg-4" v-for="value in hotelData">
+                            <div class="col-lg-4" v-for="value in hotelRooms">
                                 <div class="single-location single-location2 mb-30 ">
-                                    <img :src="value.hotel_images[0]['url']" alt="" class="hotel-image" width="" height="250">
+                                    <img :src="value.url" alt="" class="hotel-image" width="" height="250">
                                     <div class="location-contents">
-                                        <h3><a href="#" class="card-body-text">{{ value.name }} </a></h3>
-                                        <p class="card-body-text">{{ value.hotel_type?.max_occupancy }} persons package</p>
+                                        <h3><a href="#" class="card-body-text">{{ value.room_type?.name }}</a></h3>
+                                        <p class="card-body-text">{{ value.room_type?.max_occupancy }} persons package</p>
                                         <div class="price">
-                                        
-                                                <span class="card-body-text">Started from
-                                                <span class="card-body-text" v-if="value.hotel_type?.price_range === 1">Rs.40,000 </span>
-                                                <span class="card-body-text" v-else-if="value.hotel_type?.price_range === 2">Rs.100,000</span>
-                                                <span class="card-body-text" v-else="value.hotel_type?.price_range === 3 ">Rs.300,000</span>
-                                               </span>
-                                           
+
+                                            <span class="card-body-text">Started from
+                                                <span class="card-body-text"
+                                                    v-if="value.room_type?.price_range === 1">Rs.40,00 </span>
+                                                <span class="card-body-text"
+                                                    v-else-if="value.room_type?.price_range === 2">Rs.10,000</span>
+                                                <span class="card-body-text"
+                                                    v-else="value.room_type?.price_range === 3 ">Rs.30,000</span>
+                                            </span>
+
                                         </div>
                                     </div>
                                 </div>
@@ -148,21 +154,40 @@
 
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, defineProps } from 'vue';
 import axios from 'axios';
 import { Link } from '@inertiajs/vue3'
 
+const props = defineProps({
+    hotel: {
+        Type: Object,
+        require: true,
+    }
+});
+
 const hotelData = ref([]);
+const hotelRooms = ref([]);
+
 
 const getHotelData = async () => {
     try {
-        const response = await axios.get(route('hotels.all'));
-        hotelData.value = response.data;
-        console.log('hotel data', hotelData.value);
+        console.log('props:', props.hotel[0].id);
+        const hotelId = props.hotel[0].id;
+        getHotelRooms(hotelId);
     } catch (error) {
         console.log('Error:', error);
     }
+ 
+}
 
+const getHotelRooms = async (hotelId) => {
+    try{
+        const respones = await axios.get(route('hotelRooms.get',hotelId));
+        hotelRooms.value = respones.data.hotel_rooms;
+        console.log('hotel rooms',hotelRooms.value);
+    }catch(error){
+        console.log('Error',error);
+    }
 }
 
 onMounted(() => {
@@ -171,22 +196,34 @@ onMounted(() => {
 </script>
 
 <style>
-
-.hotel-image{
+.hotel-image {
     overflow: auto;
     border-radius: 2rem;
-    box-shadow: 1px 1px 4px rgb(20, 15, 15)}
+    box-shadow: 1px 1px 4px rgb(20, 15, 15)
+}
 
-.location-contents{
+.location-contents {
     background-color: rgba(19, 16, 16, 0.568);
     width: 90%;
     padding: 2%;
     border-radius: 2rem;
     color: black;
-    box-shadow:1px 1px 5px  rgba(255, 255, 255, 0.342);
+    box-shadow: 1px 1px 5px rgba(255, 255, 255, 0.342);
 }
 
-.card-body-text{
-    color:black
+.card-body-text {
+    color: black
+}
+
+.head-title{
+    display: flex;
+}
+
+.head-custom{
+    background-color: rgba(0, 0, 0, 0.295);
+    margin-left: 2rem;
+    padding: 1vh;
+    border-radius:10px;
+    box-shadow: 1px 1px 10px rgba(252, 252, 252, 0.671);
 }
 </style>

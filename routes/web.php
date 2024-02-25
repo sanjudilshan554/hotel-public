@@ -39,7 +39,7 @@ Route::prefix('contact')->group(function () {
 });
 
 Route::prefix('hotel-rooms')->group(function () {
-    // Route::get('/{hotel_id}', [HotelRoomController::class,'index'])->name('hotelRooms.get');
+    Route::get('/{hotel_id}', [HotelRoomController::class,'get'])->name('hotelRooms.get');
 });
 
 

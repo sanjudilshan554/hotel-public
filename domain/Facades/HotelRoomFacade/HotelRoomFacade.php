@@ -8,6 +8,6 @@ use Illuminate\Support\Facades\Facade;
 class HotelRoomFacade extends Facade{
 
     protected static function getFacadeAccessor(){
-        return HotelRoomService::class();
+        return HotelRoomService::class;
     }
 }
