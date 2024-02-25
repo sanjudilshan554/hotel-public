@@ -248,5 +248,24 @@
 </template>
 
 <script setup>
-import AppLayout from '@/Layouts/AppLayout.vue'
+import AppLayout from '@/Layouts/AppLayout.vue';
+import { ref, onMounted } from 'vue';
+import axios from 'axios';
+
+const hotelData = ref([]);
+
+const getHotelData = async () => {
+    try{
+        const response = await axios.get(route('hotels.all'));
+        hotelData.value = response.data;
+        console.log('hotel data',hotelData.value);
+    }catch(error){
+        console.log('Error:', error);
+    }
+    
+}
+
+onMounted(()=>{
+    getHotelData();
+});
 </script>

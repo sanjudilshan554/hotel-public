@@ -75,78 +75,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="location-house ">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-5 col-md-8">
-
-                                <div class="section-tittle mb-50">
-                                    <h2>Our Rooms</h2>
-                                    <p>The concept and service of the best luxury hotels in Asturias in our sophisticated.
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="container-fluid">
-                        <div class="rows">
-                            <div class="location-active owl-carousel">
-                                <div class="col-lg-12">
-
-                                    <div class="single-location">
-                                        <img src="@/../src/img/gallery/hotel1.jpg" alt="">
-                                        <div class="location-contents">
-                                            <h3><a href="#">Luxurious Room </a></h3>
-                                            <p>2 Adult 1 Children</p>
-                                            <div class="price">
-                                                <span>Started from<span>$500</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-
-                                    <div class="single-location">
-                                        <img src="@/../src/img/gallery/hotel2.jpg" alt="">
-                                        <div class="location-contents">
-                                            <h3><a href="#">Family Room </a></h3>
-                                            <p>2 Adult 1 Children</p>
-                                            <div class="price">
-                                                <span>Started from<span>$500</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-
-                                    <div class="single-location">
-                                        <img src="@/../src/img/gallery/hotel3.jpg" alt="">
-                                        <div class="location-contents">
-                                            <h3><a href="#">Couple Room </a></h3>
-                                            <p>2 Adult 1 Children</p>
-                                            <div class="price">
-                                                <span>Started from<span>$500</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-12">
-
-                                    <div class="single-location">
-                                        <img src="@/../src/img/gallery/hotel2.jpg" alt="">
-                                        <div class="location-contents">
-                                            <h3><a href="#">Luxurious Room </a></h3>
-                                            <p>2 Adult 1 Children</p>
-                                            <div class="price">
-                                                <span>Started from<span>$500</span></span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="services-area2 section-padding">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -255,9 +183,9 @@
                         </div>
                     </div>
                 </div>
-        </main>
-    </template>
-</AppLayout>
+            </main>
+        </template>
+    </AppLayout>
 </template>
 
 <script setup>

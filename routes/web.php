@@ -25,6 +25,7 @@ Route::get("/",[HomeController::class,"index"])->name("dashboard");
 
 Route::prefix('hotels')->group(function () {
     Route::get('/', [HotelController::class,'index'])->name('hotels.index');
+    Route::get('/all', [HotelController::class,'all'])->name('hotels.all');
 });
 
 Route::prefix('about')->group(function () {
