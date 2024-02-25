@@ -65,7 +65,7 @@
                         <div class="row">
                             <div class="col-lg-4" v-for="value in hotelRooms">
                                 <div class="single-location single-location2 mb-30 ">
-                                    <img :src="value.url" alt="" class="hotel-image" width="" height="250">
+                                    <img :src="value.url" alt="" class="hotel-image" width="" height="300">
                                     <div class="location-contents">
                                         <h3><a href="#" class="card-body-text">{{ value.room_type?.name }}</a></h3>
                                         <p class="card-body-text">{{ value.room_type?.max_occupancy }} persons package</p>

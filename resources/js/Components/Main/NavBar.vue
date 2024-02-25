@@ -50,8 +50,12 @@
                                             <li>
                                                 <Link :href="route('about.index')">About</Link>
                                             </li>
+                                            
                                             <li>
                                                 <Link :href="route('contact.index')">Contact us</Link>
+                                            </li>
+                                            <li>
+                                                <Link class="log-out" href="/logout" method="post">Logout</Link>
                                             </li>
                                         </ul>
                                     </nav>
@@ -97,4 +101,8 @@ import { Link } from '@inertiajs/vue3';
 
 }
 
+.log-out:hover{
+    text-shadow: 1px 1px 10px rgb(255, 0, 0);
+    /* background-color: rgba(255, 0, 0, 0.267); */
+}
 </style>

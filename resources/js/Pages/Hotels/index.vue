@@ -60,8 +60,8 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4" v-for="value in hotelData">
-                                <div class="single-location single-location2 mb-30" >
-                                    <img :src="value.hotel_images[0]['url']" alt="" class="hotel-image" width="" height="250">
+                                <div class="single-location single-location2 mb-30 mt-5" >
+                                    <img :src="value.hotel_images[0]['url']" alt="" class="hotel-image" width="" height="300">
                                     <div class="location-contents">
                                         <h3><a href="#" class="card-body-text" @click.prevent="selectedHotel(value.id)" >{{ value.name }} </a></h3>
                                         <p class="card-body-text">{{ value.hotel_type?.max_occupancy }} persons package</p>
@@ -193,7 +193,7 @@ onMounted(() => {
 .location-contents{
     background-color: rgba(0, 0, 0, 0.479);
     width: 90%;
-    padding: 2%;
+    padding: 4%;
     border-radius: 2rem;
     color: rgb(0, 0, 0);
 }
