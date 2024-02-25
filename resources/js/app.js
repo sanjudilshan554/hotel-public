@@ -5,7 +5,7 @@ import '../src/js/vendor/modernizr-3.5.0.min.js';
 import '../src/js/vendor/jquery-1.12.4.min.js';
 
 // import '../src/js/popper.min.js'
-
+import '../src/owl.carousel.min.js';
 import '../src/js//bootstrap.min.js';
 import '../src/js/owl.carousel.min.js';
 import '../src/js/slick.min.js';

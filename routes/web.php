@@ -1,9 +1,11 @@
 <?php
 
+use App\Http\Controllers\AboutController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
+use Illuminate\Foundation\Console\AboutCommand;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 
@@ -24,15 +26,13 @@ Route::prefix('hotels')->group(function () {
     Route::get('/', [HotelController::class,'index'])->name('hotels.index');
 });
 
+Route::prefix('about')->group(function () {
+    Route::get('/', [AboutController::class,'index'])->name('about.index');
+});
 
-Route::get('/dashboard', function () {
-    return Inertia::render('Dashboard');
+
+Route::get('/', function () {
+    return Inertia::render('Home/index');
 })->middleware(['auth', 'verified'])->name('dashboard');
-
-// Route::middleware('auth')->group(function () {
-//     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-//     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-//     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
-// });
 
 require __DIR__.'/auth.php';

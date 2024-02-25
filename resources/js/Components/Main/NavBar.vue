@@ -40,16 +40,9 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><a href="index.html">Home</a></li>
-                                            <li><a :href="route('hotels.index')">Hotels</a></li>
-                                            <li><Link >About</Link></li>
-                                            <li><a href="#">Blog</a>
-                                                <ul class="submenu">
-                                                    <li><a href="blog.html">Blog</a></li>
-                                                    <li><a href="blog_details.html">Blog Details</a></li>
-                                                    <li><a href="elements.html">Element</a></li>
-                                                </ul>
-                                            </li>
+                                            <li><Link :href="route('dashboard')">Home</Link></li>
+                                            <li><Link :href="route('hotels.index')">Hotels</Link></li>
+                                            <li><Link :href="route('about.index')">About</Link></li>
                                             <li><a href="contact.html">Contact Us</a></li>
                                         </ul>
                                     </nav>

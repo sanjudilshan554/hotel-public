@@ -21,45 +21,22 @@
                                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
 
                                     <div class="date-pic mb-15">
-                                        <label>Check In Date*</label>
-                                        <div class="boking-datepicker">
-                                            <input id="datepicker1" placeholder="Check in" />
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
 
                                     <div class="date-pic mb-15">
-                                        <label>Check Out Date*</label>
-                                        <div class="boking-datepicker">
-                                            <input id="datepicker2" placeholder="Check out" />
-                                        </div>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
                                     <div class="select-form mb-15">
-                                        <select name="select" id="select1">
-                                            <option value>Adult</option>
-                                            <option value>Adult</option>
-                                            <option value>Adult</option>
-                                            <option value>Adult</option>
-                                        </select>
                                     </div>
                                 </div>
                                 <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
                                     <div class="select-form mb-15">
-                                        <select name="select" id="select2">
-                                            <option value>Children</option>
-                                            <option value>Children</option>
-                                            <option value>Children</option>
-                                            <option value>Children</option>
-                                        </select>
                                     </div>
                                 </div>
-                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">
-                                    <div class="search-form">
-                                        <a href="#">Search</a>
-                                    </div>
+                                <div class="col-xl-2 col-lg-4 col-md-4 col-sm-6">>
                                 </div>
                             </div>
                         </form>
@@ -211,19 +188,6 @@
                         </div>
                     </div>
                 </div>
-                <div class="video-area section-img-bg2 d-flex align-items-center"
-                    data-background="assets/img/gallery/video-bg.jpg">
-                    <div class="container">
-                        <div class="video-wrap position-relative">
-
-                            <div class="video-icon">
-                                <a class="popup-video btn-icon" href="https://www.youtube.com/watch?v=up68UAfH0d0">
-                                    <img src="@/../src/img/icon/video-icon.svg" alt="">
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
                 <div class="guest-house section-padding">
                     <div class="container">
                         <div class="row justify-content-center">
@@ -291,56 +255,6 @@
                         </div>
                     </div>
                 </div>
-                <section class="client-say">
-                    <div class="container">
-                        <div class="custom-row">
-                            <div class="client-active">
-                                <div class="col-lg-5 col-md-6 col-sm-6">
-                                    <div class="client-caption">
-                                        <h3>Nice Accommodation</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
-
-                                        <div class="testimonial-founder d-flex align-items-center mt-30">
-                                            <div class="founder-text">
-                                                <span>- Omeka Lotus</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-6 col-sm-6">
-                                    <div class="client-caption">
-                                        <h3>Delicious Food</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
-
-                                        <div class="testimonial-founder d-flex align-items-center mt-30">
-                                            <div class="founder-text">
-                                                <span>- Omeka Lotus</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-lg-5 col-md-6 col-sm-6">
-                                    <div class="client-caption">
-                                        <h3>Nice Accommodation</h3>
-                                        <p>"Leather detail shoulder contrastic colour
-                                            contour stunning silhouette working peplum.
-                                            Statement buttons cover-up tweaks patch.</p>
-
-                                        <div class="testimonial-founder d-flex align-items-center mt-30">
-                                            <div class="founder-text">
-                                                <span>- Omeka Lotus</span>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                    </div>
-                </div>
-            </section>
         </main>
     </template>
 </AppLayout>
