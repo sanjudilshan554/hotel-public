@@ -60,17 +60,19 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4" v-for="value in hotelData">
-                                <div class="single-location single-location2 mb-30" >
+                                <div class="single-location single-location2 mb-30 ">
                                     <img :src="value.hotel_images[0]['url']" alt="" class="hotel-image" width="" height="250">
                                     <div class="location-contents">
-                                        <h3><a href="#" class="card-body-text" @click.prevent="selectedHotel(value.id)" >{{ value.name }} </a></h3>
+                                        <h3><a href="#" class="card-body-text">{{ value.name }} </a></h3>
                                         <p class="card-body-text">{{ value.hotel_type?.max_occupancy }} persons package</p>
                                         <div class="price">
-                                            <span class="card-body-text" @click.prevent="selectedHotel(value.id)" >Started from
-                                                <span class="card-body-text" v-if="value.hotel_type?.price_range === 1">Rs.40,000</span>
+                                        
+                                                <span class="card-body-text">Started from
+                                                <span class="card-body-text" v-if="value.hotel_type?.price_range === 1">Rs.40,000 </span>
                                                 <span class="card-body-text" v-else-if="value.hotel_type?.price_range === 2">Rs.100,000</span>
                                                 <span class="card-body-text" v-else="value.hotel_type?.price_range === 3 ">Rs.300,000</span>
-                                            </span>
+                                               </span>
+                                           
                                         </div>
                                     </div>
                                 </div>
@@ -146,9 +148,9 @@
 
 <script setup>
 import AppLayout from '@/Layouts/AppLayout.vue';
-import { ref, onMounted, } from 'vue';
+import { ref, onMounted } from 'vue';
 import axios from 'axios';
-import { Link } from '@inertiajs/vue3';
+import { Link } from '@inertiajs/vue3'
 
 const hotelData = ref([]);
 
@@ -161,10 +163,6 @@ const getHotelData = async () => {
         console.log('Error:', error);
     }
 
-}
-
-const selectedHotel = (id) => {
-    window.location.href = route('hotels.get', id);
 }
 
 onMounted(() => {
@@ -185,6 +183,7 @@ onMounted(() => {
     padding: 2%;
     border-radius: 2rem;
     color: black;
+    box-shadow:1px 1px 5px  rgba(255, 255, 255, 0.342);
 }
 
 .card-body-text{

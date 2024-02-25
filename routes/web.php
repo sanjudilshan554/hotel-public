@@ -4,6 +4,7 @@ use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\HotelRoomController;
 use App\Http\Controllers\ProfileController;
 use Illuminate\Foundation\Application;
 use Illuminate\Foundation\Console\AboutCommand;
@@ -26,6 +27,7 @@ Route::get("/",[HomeController::class,"index"])->name("dashboard");
 Route::prefix('hotels')->group(function () {
     Route::get('/', [HotelController::class,'index'])->name('hotels.index');
     Route::get('/all', [HotelController::class,'all'])->name('hotels.all');
+    Route::get('/{hotel_id}', [HotelController::class,'get'])->name('hotels.get');
 });
 
 Route::prefix('about')->group(function () {
@@ -35,6 +37,11 @@ Route::prefix('about')->group(function () {
 Route::prefix('contact')->group(function () {
     Route::get('/', [ContactController::class,'index'])->name('contact.index');
 });
+
+Route::prefix('hotel-rooms')->group(function () {
+    // Route::get('/{hotel_id}', [HotelRoomController::class,'index'])->name('hotelRooms.get');
+});
+
 
 
 Route::get('/', function () {
