@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AboutController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ProfileController;
@@ -28,6 +29,10 @@ Route::prefix('hotels')->group(function () {
 
 Route::prefix('about')->group(function () {
     Route::get('/', [AboutController::class,'index'])->name('about.index');
+});
+
+Route::prefix('contact')->group(function () {
+    Route::get('/', [ContactController::class,'index'])->name('contact.index');
 });
 
 

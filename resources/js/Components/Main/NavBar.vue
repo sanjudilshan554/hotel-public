@@ -27,7 +27,7 @@
                         </div>
                     </div>
                 </div>
-                
+
                 <div class="header-bottom header-sticky">
                     <div class="container-fluid">
                         <div class="d-flex align-items-center justify-content-between flex-wrap">
@@ -40,10 +40,18 @@
                                 <div class="main-menu d-none d-lg-block">
                                     <nav>
                                         <ul id="navigation">
-                                            <li><Link :href="route('dashboard')">Home</Link></li>
-                                            <li><Link :href="route('hotels.index')">Hotels</Link></li>
-                                            <li><Link :href="route('about.index')">About</Link></li>
-                                            <li><a href="contact.html">Contact Us</a></li>
+                                            <li>
+                                                <Link :href="route('dashboard')">Home</Link>
+                                            </li>
+                                            <li>
+                                                <Link :href="route('hotels.index')">Hotels</Link>
+                                            </li>
+                                            <li>
+                                                <Link :href="route('about.index')">About</Link>
+                                            </li>
+                                            <li>
+                                                <Link :href="route('contact.index')">Contact us</Link>
+                                            </li>
                                         </ul>
                                     </nav>
                                 </div>
