@@ -26,10 +26,6 @@ class HotelRooms extends Model
         return $this->hasOne(Hotel::class,'id','hotel_id');
     }
 
-    // public function rooms(){
-    //     return $this->hasMany(RoomType::class,'id','room_type_id');
-    // }
-
     public function roomType()
     {
         return $this->belongsTo(RoomType::class, 'room_type_id', 'id');

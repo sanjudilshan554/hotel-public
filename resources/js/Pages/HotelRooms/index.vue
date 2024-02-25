@@ -2,7 +2,7 @@
     <AppLayout>
         <template #content>
             <main>
-                <div class="slider-area hero-bg1  hero-overly">
+                <div class="slider-area hero-bg1  hero-overly" :style="{backgroundImage: 'url(' + hotelImage + ')'}">
                     <div class="single-slider  slider-height2 d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-center ">
@@ -12,7 +12,9 @@
                                             <div class="head">Hotel </div>
                                             <div class="head-custom">{{ props.hotel[0].name }}</div>
                                         </h1>
+                                        
                                     </div>
+                                    <h1 class="sub-header-one">{{ props.hotel[0].description }}</h1>
                                 </div>
                             </div>
                         </div>
@@ -21,11 +23,11 @@
                         <form action="#" class="search-box pb-45">
                             <div class="row align-items-end">
                                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-
+                                   
                                     <div class="date-pic mb-15">
                                         <label for="#"></label>
                                         <div class="boking-datepicker">
-                                            <h1>{{ props.hotel[0].hotel_type.name }}</h1>
+                                            <h1 class="sub-header-two">{{ props.hotel[0].hotel_type.name }}</h1>
                                         </div>
                                     </div>
                                 </div>
@@ -167,12 +169,15 @@ const props = defineProps({
 
 const hotelData = ref([]);
 const hotelRooms = ref([]);
-
+const hotelImage = ref({});
 
 const getHotelData = async () => {
     try {
-        console.log('props:', props.hotel[0].id);
+        console.log('props:', props.hotel[0].hotel_images[0].url);
         const hotelId = props.hotel[0].id;
+        // hotelImage.value = props.hotel[0].
+        // console.log(hotel)
+        hotelImage.value= props.hotel[0].hotel_images[0].url;
         getHotelRooms(hotelId);
     } catch (error) {
         console.log('Error:', error);
@@ -217,6 +222,7 @@ onMounted(() => {
 
 .head-title{
     display: flex;
+    width: 100vh;
 }
 
 .head-custom{
@@ -225,5 +231,27 @@ onMounted(() => {
     padding: 1vh;
     border-radius:10px;
     box-shadow: 1px 1px 10px rgba(252, 252, 252, 0.671);
+}
+
+.sub-header-one{
+    color: rgb(255, 255, 255);
+    font-size: larger;
+    text-align: center;
+    text-shadow: 1px 1px 5px rgb(44, 29, 29);
+}
+
+.sub-header-two{
+    color: white;
+    font-size: larger;
+    
+}
+
+.hero-bg1{
+    background-image:url('');
+}
+
+.hero-bg1 {
+    background-size: cover;
+    background-position: center;
 }
 </style>
