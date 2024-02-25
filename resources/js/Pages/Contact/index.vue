@@ -2,13 +2,13 @@
     <AppLayout>
         <template #content>
             <main>
-                <div class="slider-area hero-bg1 hero-overly">
+                <div class="slider-area hero-bg1">
                     <div class="single-slider slider-height3 d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-center">
                                 <div class="col-xl-7 col-lg-11">
                                     <div class="hero-caption hero-caption3">
-                                        <h1>Contact Us</h1>
+                                        <h1 class="main-cover-text">Contact Us</h1>
                                     </div>
                                 </div>
                             </div>
@@ -1285,3 +1285,18 @@
 import AppLayout from '@/Layouts/AppLayout.vue';                           
                             
 </script>
+
+<style scoped>
+
+.hero-bg1{
+    background-image: url('@/../../public/img/hero/contact.jpg');
+    background-size: cover;
+}
+
+
+.main-cover-text{
+    color:rgb(0, 0, 0);
+    font-size: 3rem;
+    text-shadow: 1px 1px 10px rgb(255, 255, 255);
+}
+</style>

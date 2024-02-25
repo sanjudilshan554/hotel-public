@@ -2,8 +2,8 @@
     <AppLayout>
         <template #content>
             <main>
-                <div class="slider-area hero-bg1  hero-overly" :style="{backgroundImage: 'url(' + hotelImage + ')'}">
-                    <div class="single-slider  slider-height2 d-flex align-items-center">
+                <div class="slider-area hero-bg1" :style="{backgroundImage: 'url(' + hotelImage + ')', backgroundColor: 'rgba(224, 28, 28, 1)' }">
+                    <div class="single-slider slider-height2 d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-center ">
                                 <div class="col-xl-6 col-lg-6">
@@ -12,14 +12,13 @@
                                             <div class="head">Hotel </div>
                                             <div class="head-custom">{{ props.hotel[0].name }}</div>
                                         </h1>
-                                        
                                     </div>
                                     <h1 class="sub-header-one">{{ props.hotel[0].description }}</h1>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="container">
+                    <div class="container ">
                         <form action="#" class="search-box pb-45">
                             <div class="row align-items-end">
                                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
@@ -99,11 +98,11 @@
                             </div>
                         </div>
                     </div>
-                    <div class="container">
+                    <div class="container ">
                         <div class="row">
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-location single-location2 mb-30 mb-30">
-                                    <img src="@/../src/img/gallery/guest1.jpg" alt>
+                                    <img src="@/../../public/img/gallery/guest1.jpg" alt>
                                     <div class="guest-contents guest-contents2">
                                         <h3><a href="#">Free Drinks</a></h3>
                                     </div>
@@ -118,7 +117,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-location single-location2 mb-30 mb-30">
-                                    <img src="@/../src/img/gallery/guest2.jpg" alt>
+                                    <img src="@/../../public/img/gallery/guest2.jpg" alt>
                                     <div class="guest-contents guest-contents2">
                                         <h3><a href="#">Free Breakfast</a></h3>
                                     </div>
@@ -133,7 +132,7 @@
                             </div>
                             <div class="col-lg-4 col-md-6 col-sm-6">
                                 <div class="single-location single-location2 mb-30 mb-30">
-                                    <img src="@/../src/img/gallery/guest3.jpg" alt>
+                                    <img src="@/../../public/img/gallery/guest3.jpg" alt>
                                     <div class="guest-contents guest-contents2">
                                         <h3><a href="#">Free Dinner</a></h3>
                                     </div>
@@ -200,7 +199,7 @@ onMounted(() => {
 });
 </script>
 
-<style>
+<style scoped>
 .hotel-image {
     overflow: auto;
     border-radius: 2rem;
@@ -208,7 +207,7 @@ onMounted(() => {
 }
 
 .location-contents {
-    background-color: rgba(19, 16, 16, 0.568);
+    background-color: rgba(19, 16, 16, 0.274);
     width: 90%;
     padding: 2%;
     border-radius: 2rem;
@@ -217,12 +216,14 @@ onMounted(() => {
 }
 
 .card-body-text {
-    color: black
+    color: black;
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
 .head-title{
     display: flex;
     width: 100vh;
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
 .head-custom{
@@ -231,27 +232,42 @@ onMounted(() => {
     padding: 1vh;
     border-radius:10px;
     box-shadow: 1px 1px 10px rgba(252, 252, 252, 0.671);
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
 .sub-header-one{
     color: rgb(255, 255, 255);
     font-size: larger;
     text-align: center;
-    text-shadow: 1px 1px 5px rgb(44, 29, 29);
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
 .sub-header-two{
     color: white;
     font-size: larger;
-    
+    text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
-.hero-bg1{
-    background-image:url('');
+.head{
+    text-shadow:1px 1px 5px rgb(0, 0, 0);
+   
 }
-
 .hero-bg1 {
     background-size: cover;
     background-position: center;
+}
+.single-slider::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+    z-index: 1;
+}
+
+.single-slider {
+    position: relative;
 }
 </style>

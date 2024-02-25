@@ -33,7 +33,8 @@
                         <div class="d-flex align-items-center justify-content-between flex-wrap">
 
                             <div class="logo">
-                                <Link :href="route('dashboard')" class="main-logo"><img class="main-logo" src="@/../src/img/logo/logo.png" alt=""></Link>
+                                <Link :href="route('dashboard')" class="main-logo"><img class="main-logo"
+                                    src="@/../../public/img/logo/logon.png" alt=""></Link>
                             </div>
                             <div class="menu-wrapper d-flex align-items-center">
 
@@ -77,11 +78,23 @@ import { Link } from '@inertiajs/vue3';
 </script>
 
 <style>
+.main-logo {
+    width: 9rem;
+}
 
-.main-logo{
- 
- width: 9rem;
-    
+.main-menu {
+    color: black;
+}
+
+.header-btn2 {
+    background-color: rgba(0, 0, 0, 0.445);
+}
+
+.header-bottom {
+    color: black;
+    text-shadow: 1px 1px 5px white;
+    background-color: rgba(240, 248, 255, 0.377);
+
 }
 
 </style>
