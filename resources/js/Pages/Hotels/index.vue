@@ -8,7 +8,7 @@
                             <div class="row justify-content-center ">
                                 <div class="col-xl-7 col-lg-11">
                                     <div class="hero-caption hero-caption2 pt-10">
-                                        <h3 class="main-cover-text" >Hotels</h3>
+                                        <h3 class="main-cover-text">Hotels</h3>
                                     </div>
                                 </div>
                             </div>
@@ -60,16 +60,22 @@
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-4" v-for="value in hotelData">
-                                <div class="single-location single-location2 mb-30 mt-5" >
-                                    <img :src="value.hotel_images[0]['url']" alt="" class="hotel-image" width="" height="300">
+                                <div class="single-location single-location2 mb-30 mt-5">
+                                    <img :src="value.hotel_images[0]['url']" alt="" class="hotel-image" width=""
+                                        height="300">
                                     <div class="location-contents">
-                                        <h3><a href="#" class="card-body-text" @click.prevent="selectedHotel(value.id)" >{{ value.name }} </a></h3>
+                                        <h3><a href="#" class="card-body-text" @click.prevent="selectedHotel(value.id)">{{
+                                            value.name }} </a></h3>
                                         <p class="card-body-text">{{ value.hotel_type?.max_occupancy }} persons package</p>
                                         <div class="price">
-                                            <span class="card-body-text" @click.prevent="selectedHotel(value.id)" >Started from
-                                                <span class="card-body-text" v-if="value.hotel_type?.price_range === 1">Rs.40,000</span>
-                                                <span class="card-body-text" v-else-if="value.hotel_type?.price_range === 2">Rs.100,000</span>
-                                                <span class="card-body-text" v-else="value.hotel_type?.price_range === 3 ">Rs.300,000</span>
+                                            <span class="card-body-text" @click.prevent="selectedHotel(value.id)">Started
+                                                from
+                                                <span class="card-body-text"
+                                                    v-if="value.hotel_type?.price_range === 1">Rs.40,000</span>
+                                                <span class="card-body-text"
+                                                    v-else-if="value.hotel_type?.price_range === 2">Rs.100,000</span>
+                                                <span class="card-body-text"
+                                                    v-else="value.hotel_type?.price_range === 3 ">Rs.300,000</span>
                                             </span>
                                         </div>
                                     </div>
@@ -148,7 +154,6 @@
 import AppLayout from '@/Layouts/AppLayout.vue';
 import { ref, onMounted, } from 'vue';
 import axios from 'axios';
-import { Link } from '@inertiajs/vue3';
 
 const hotelData = ref([]);
 
@@ -173,24 +178,24 @@ onMounted(() => {
 </script>
 
 <style scoped>
-
-.hero-bg1{
+.hero-bg1 {
     background-image: url('@/../../public/img/hero/hotel.jpg');
     background-size: cover;
 }
 
-.main-cover-text{
-    color:rgb(255, 255, 255);
+.main-cover-text {
+    color: rgb(255, 255, 255);
     font-size: 3rem;
     text-shadow: 1px 1px 10px rgb(255, 255, 255);
 }
 
-.hotel-image{
+.hotel-image {
     overflow: auto;
     border-radius: 2rem;
-    box-shadow: 1px 1px 4px rgb(20, 15, 15)}
+    box-shadow: 1px 1px 4px rgb(20, 15, 15)
+}
 
-.location-contents{
+.location-contents {
     background-color: rgba(0, 0, 0, 0.479);
     width: 90%;
     padding: 4%;
@@ -198,7 +203,6 @@ onMounted(() => {
     color: rgb(0, 0, 0);
 }
 
-.card-body-text{
-    color:rgb(10, 9, 9)
-}
-</style>
+.card-body-text {
+    color: rgb(10, 9, 9)
+}</style>

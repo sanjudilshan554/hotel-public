@@ -2,7 +2,7 @@
     <AppLayout>
         <template #content>
             <main>
-                <div class="slider-area hero-bg1 " >
+                <div class="slider-area hero-bg1 ">
                     <div class="single-slider  slider-height1 d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-center ">
@@ -193,14 +193,13 @@ import AppLayout from '@/Layouts/AppLayout.vue';
 </script>
 
 <style scoped>
-
-.hero-bg1{
+.hero-bg1 {
     background-image: url('@/../../public/img/hero/home.jpg');
     background-size: cover;
 }
 
-.main-cover-text{
-    color:rgb(255, 255, 255);
+.main-cover-text {
+    color: rgb(255, 255, 255);
     font-size: 3rem;
     text-shadow: 1px 1px 10px rgb(0, 0, 0);
 }

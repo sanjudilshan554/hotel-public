@@ -3,29 +3,23 @@ import '../css/app.css';
 
 import '../src/js/vendor/modernizr-3.5.0.min.js';
 import '../src/js/vendor/jquery-1.12.4.min.js';
-
 // import '../src/js/popper.min.js'
 import '../src/owl.carousel.min.js';
 import '../src/js//bootstrap.min.js';
 import '../src/js/owl.carousel.min.js';
 import '../src/js/slick.min.js';
 import '../src/js/jquery.slicknav.min.js';
-
 // import '../src/js/wow.min.js'
-
 import '../src/js/jquery.magnific-popup.js';
 import '../src/js/jquery.nice-select.min.js';
 import '../src/js/jquery.counterup.min.js';
-
 // import '../src/js/waypoints.min.js'
-
 import '../src/js/gijgo.min.js';
 import '../src/js/contact.js';
 import '../src/js/jquery.form.js';
 import '../src/js/jquery.validate.min.js';
 import '../src/js/mail-script.js';
 import '../src/js/jquery.ajaxchimp.min.js';
-
 import '../src/js/plugins.js';
 // import '../src/js/main.js'
 

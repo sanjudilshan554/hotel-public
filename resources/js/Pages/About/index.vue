@@ -165,7 +165,6 @@
                         </div>
                     </div>
                 </div>
-
             </main>
         </template>
     </AppLayout>
@@ -177,16 +176,14 @@ import AppLayout from '@/Layouts/AppLayout.vue'
 </script>
 
 <style scoped>
-
-.hero-bg1{
+.hero-bg1 {
     background-image: url('@/../../public/img/hero/dc.jpg');
     background-size: cover;
 }
 
-.main-cover-text{
-    color:rgb(255, 255, 255);
+.main-cover-text {
+    color: rgb(255, 255, 255);
     font-size: 3rem;
     text-shadow: 1px 1px 10px rgb(255, 255, 255);
 }
-
 </style>

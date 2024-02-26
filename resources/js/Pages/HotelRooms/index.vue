@@ -2,7 +2,8 @@
     <AppLayout>
         <template #content>
             <main>
-                <div class="slider-area hero-bg1" :style="{backgroundImage: 'url(' + hotelImage + ')', backgroundColor: 'rgba(224, 28, 28, 1)' }">
+                <div class="slider-area hero-bg1"
+                    :style="{ backgroundImage: 'url(' + hotelImage + ')', backgroundColor: 'rgba(224, 28, 28, 1)' }">
                     <div class="single-slider slider-height2 d-flex align-items-center">
                         <div class="container">
                             <div class="row justify-content-center ">
@@ -22,7 +23,7 @@
                         <form action="#" class="search-box pb-45">
                             <div class="row align-items-end">
                                 <div class="col-xl-3 col-lg-6 col-md-6 col-sm-6">
-                                   
+
                                     <div class="date-pic mb-15">
                                         <label for="#"></label>
                                         <div class="boking-datepicker">
@@ -174,23 +175,21 @@ const getHotelData = async () => {
     try {
         console.log('props:', props.hotel[0].hotel_images[0].url);
         const hotelId = props.hotel[0].id;
-        // hotelImage.value = props.hotel[0].
-        // console.log(hotel)
-        hotelImage.value= props.hotel[0].hotel_images[0].url;
+        hotelImage.value = props.hotel[0].hotel_images[0].url;
         getHotelRooms(hotelId);
     } catch (error) {
         console.log('Error:', error);
     }
- 
+
 }
 
 const getHotelRooms = async (hotelId) => {
-    try{
-        const respones = await axios.get(route('hotelRooms.get',hotelId));
+    try {
+        const respones = await axios.get(route('hotelRooms.get', hotelId));
         hotelRooms.value = respones.data.hotel_rooms;
-        console.log('hotel rooms',hotelRooms.value);
-    }catch(error){
-        console.log('Error',error);
+        console.log('hotel rooms', hotelRooms.value);
+    } catch (error) {
+        console.log('Error', error);
     }
 }
 
@@ -203,7 +202,7 @@ onMounted(() => {
 .hotel-image {
     overflow: auto;
     border-radius: 2rem;
-    box-shadow: 1px 1px 4px rgb(20, 15, 15)
+    box-shadow: 1px 1px 4px rgb(12, 12, 12)
 }
 
 .location-contents {
@@ -220,42 +219,44 @@ onMounted(() => {
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
-.head-title{
+.head-title {
     display: flex;
     width: 100vh;
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
-.head-custom{
+.head-custom {
     background-color: rgba(0, 0, 0, 0.295);
     margin-left: 2rem;
     padding: 1vh;
-    border-radius:10px;
+    border-radius: 10px;
     box-shadow: 1px 1px 10px rgba(252, 252, 252, 0.671);
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
-.sub-header-one{
+.sub-header-one {
     color: rgb(255, 255, 255);
     font-size: larger;
     text-align: center;
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
-.sub-header-two{
+.sub-header-two {
     color: white;
     font-size: larger;
     text-shadow: 1px 1px 5px rgb(255, 255, 255);
 }
 
-.head{
-    text-shadow:1px 1px 5px rgb(0, 0, 0);
-   
+.head {
+    text-shadow: 1px 1px 5px rgb(0, 0, 0);
+
 }
+
 .hero-bg1 {
     background-size: cover;
     background-position: center;
 }
+
 .single-slider::after {
     content: "";
     position: absolute;

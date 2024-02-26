@@ -12,10 +12,15 @@ class HotelService {
     }
 
     public function all(){
-        return $this->hotels->with('hotelImages','hotelRooms', 'hotelType')->get();
+        return $this->hotels
+            ->with('hotelImages','hotelRooms', 'hotelType')
+            ->get();
     }
 
     public function get($id){
-        return $this->hotels->where('id',$id)->with('hotelImages','hotelRooms', 'hotelType')->get();
+        return $this->hotels
+            ->where('id',$id)
+            ->with('hotelImages','hotelRooms', 'hotelType')
+            ->get();
     }
 }
